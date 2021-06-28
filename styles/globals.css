@@ -1,0 +1,22 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height:100%;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f8fcfd;
+}
+
+a {
+  color: #236B8E;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+* {
+  box-sizing: border-box;
+}
