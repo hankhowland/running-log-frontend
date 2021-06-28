@@ -5,22 +5,8 @@ import Log from '../components/Log'
 import Link from 'next/link'
 import ThisWeek from '../components/ThisWeek'
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql
-} from "@apollo/client";
-
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
-  cache: new InMemoryCache()
-});
-
 export default function Home() {
   return (
-    <ApolloProvider client={client}>
       <Outer>
         <SubHeaderL>
           <h3>This week's training</h3>
@@ -42,7 +28,6 @@ export default function Home() {
           <Goals />
         </SubHeaderR>
       </Outer>
-    </ApolloProvider>
   )
 }
 

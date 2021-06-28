@@ -35,9 +35,11 @@ const GET_WEEK = gql`
 const ThisWeek = () => {
     const { loading, error, data } = useQuery(GET_WEEK);
     if (loading) {return "loading.."}
-    return (
-        <WeekCompact week={data.week} />
-    )
+    if (data) {
+        return <WeekCompact week={data.week} />
+    } else {
+        return "no data"
+    }
 }
 
 export default ThisWeek;

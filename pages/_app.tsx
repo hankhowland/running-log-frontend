@@ -9,7 +9,7 @@ import {
 } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
+  uri: 'https://runs-backend.herokuapp.com',
   cache: new InMemoryCache()
 });
 
