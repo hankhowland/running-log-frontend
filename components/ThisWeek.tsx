@@ -21,6 +21,7 @@ const dateStr = `${prevMonday.getMonth()}/${prevMonday.getDate()}/${prevMonday.g
 const GET_WEEK = gql`
   query getWeek {
     week(startdate: "${dateStr}") {
+            startDate
             mon
             tues
             wed
