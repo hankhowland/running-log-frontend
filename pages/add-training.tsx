@@ -74,7 +74,7 @@ const AddTraining = () => {
 
             </AddTrainingCont>
             <div style={{margin: "auto", width: 200}}>
-                <Link href="/">back to home page >></Link>
+                <Link href="/">back to home page &gt;&gt;</Link>
             </div>
         </>
     )

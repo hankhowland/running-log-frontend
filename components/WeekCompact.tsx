@@ -1,6 +1,20 @@
 import styled from "styled-components"
 
-const WeekCompact = ({ week }) => {
+export interface Week {
+    startDate: string;
+    mon: string;
+    tues: string;
+    wed: string;
+    thurs: string;
+    fri: string;
+    sat: string;
+    sun: string;
+}
+
+interface WeekCompactProps {
+    week: Week
+}
+const WeekCompact = ( { week }: WeekCompactProps) => {
     return (
         <WeekCont>
             week of <b>{week.startDate}</b>:<br/>

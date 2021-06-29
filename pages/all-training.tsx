@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useQuery, useMutation, gql } from '@apollo/client';
-import WeekCompact from '../components/WeekCompact'
+import WeekCompact, { Week } from '../components/WeekCompact'
 const GET_WEEKS = gql`
     query getWeeks {
         weeks {
@@ -42,7 +42,7 @@ const AllTraining = () => {
 
     const deleteOnClick = function(startDate: String) {
         deleteWeek({variables: { startdate: startDate }});
-        var newWeeks = weeks.filter(function( obj ) {
+        var newWeeks = weeks.filter(function( obj: Week ) {
             return obj.startDate !== startDate;
         });
         setWeeks(newWeeks)
@@ -50,7 +50,7 @@ const AllTraining = () => {
     return (
         <AllTrainingCont>
             <h3>All Training:</h3>
-            {weeks.map((week) => {
+            {weeks.map((week: Week) => {
                 return (
                     <>
                         <WeekCompact week={week} key={week.startDate} />
@@ -61,7 +61,7 @@ const AllTraining = () => {
                 )
             })}
             <div>
-                <Link href="/">back to home page >></Link>
+                <Link href="/">back to home page &gt;&gt;</Link>
             </div>
         </AllTrainingCont>
         

@@ -12,11 +12,11 @@ export default function Home() {
           <h3>This week's training</h3>
           <ThisWeek />
           <div>
-            <Link href="/add-training">add training >></Link>
+            <Link href="/add-training">add training &gt;&gt;</Link>
           </div>
           <br/>or <br/><br/>
           <div>
-            <Link href="/all-training">see upcoming weeks >></Link>
+            <Link href="/all-training">see upcoming weeks &gt;&gt;</Link>
           </div>
         </SubHeaderL>
         <Wrap>
