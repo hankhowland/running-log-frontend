@@ -9,7 +9,7 @@ export default function Home() {
   return (
       <Outer>
         <SubHeaderL>
-          <h3>This week$apos;s training</h3>
+          <h3>This week&apos;s training</h3>
           <ThisWeek />
           <div>
             <Link href="/add-training">add training &gt;&gt;</Link>
